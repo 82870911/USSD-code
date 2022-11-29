@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navig"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="ussdcode.Fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_internetFragment"
+            app:destination="@id/internetFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_tarifFragment"
+            app:destination="@id/tarifFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_minutFragment"
+            app:destination="@id/minutFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_newsFragment"
+            app:destination="@id/newsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tarifFragment"
+        android:name="ussdcode.Fragment.TarifFragment"
+        android:label="fragment_tarif"
+        tools:layout="@layout/fragment_tarif">
+
+        <action
+            android:id="@+id/action_tarifFragment_to_tarifInfo"
+            app:destination="@id/tarifInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/minutFragment"
+        android:name="ussdcode.Fragment.MinutFragment"
+        android:label="fragment_minut"
+        tools:layout="@layout/fragment_minut">
+        <action
+            android:id="@+id/action_minutFragment_to_minutInfo"
+            app:destination="@id/minutInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/tarifInfo"
+        android:name="ussdcode.Fragment.TarifInfo"
+        android:label="fragment_tarif_info"
+        tools:layout="@layout/fragment_tarif_info" />
+    <fragment
+        android:id="@+id/minutInfo"
+        android:name="ussdcode.Fragment.MinutInfo"
+        android:label="fragment_minut_info"
+        tools:layout="@layout/fragment_minut_info" />
+    <fragment
+        android:id="@+id/internetFragment"
+        android:name="ussdcode.Fragment.InternetFragment"
+        android:label="fragment_internet"
+        tools:layout="@layout/fragment_internet" />
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="ussdcode.Fragment.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" />
+</navigation>
